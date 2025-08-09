@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Neue:wght@700&display=swap');
+
+body {
+  font-family: 'Comic Neue', cursive;
+  background: linear-gradient(to bottom, #ffffff, #fff6f2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #fff;
+  user-select: none;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Floating bubbly blobs */
+/* Removed as per instructions */
+
+/* Glassy card with layered glow and subtle glitch */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2rem;
+  padding: 3rem 3.5rem;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  color: #aee8ff;
+  font-family: 'Fredoka One', cursive;
+  user-select: none;
+  transition: transform 0.35s ease;
+  cursor: default;
+}
+.card:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtle glitch effect on card */
+/* Removed as per instructions */
+
+#hour, #minute {
+  font-size: 8rem;
+  line-height: 1;
+  text-shadow: 0 0 8px rgba(0, 170, 255, 0.9), 0 0 16px rgba(0, 170, 255, 0.7);
+  display: inline-block;
+  user-select: text;
+  letter-spacing: 0.03em;
+  animation: none;
+}
+#minute {
+  animation-delay: 0s;
+}
+@keyframes bounce {
+  /* Removed as per instructions */
+}
+@keyframes neon-flicker {
+  /* Removed as per instructions */
+}
+
+/* AM/PM style with subtle glow */
+#ampm {
+  margin-top: -1.2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow: 0 0 2px #00000088;
+  letter-spacing: 0.1em;
+  animation: none;
+}
+
+/* Date style */
+#date {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000000cc;
+  margin-top: 0.5rem;
+  font-style: italic;
+  filter: drop-shadow(0 0 2px #646363aa);
+}
+
+/* Toggle switch: spinning knob and glowing track */
+.toggle-switch {
+  appearance: none;
+  width: 3.8rem;
+  height: 2rem;
+  background: #32d7f0d8;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  box-shadow: none;
+}
+
+.toggle-switch:checked {
+  background: #61d5f2d8;
+  box-shadow: none;
+}
+
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  top: 0.15rem;
+  left: 0.15rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  background: #000000dd;
+  border-radius: 50%;
+  box-shadow: none;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+.toggle-switch:checked::before {
+  transform: translateX(1.8rem);
+}
+
+/* Gradient funky buttons with neon glow & bounce */
+.btn-gradient {
+  background: #000000;
+  color: white;
+  border-radius: 3rem;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  box-shadow: none;
+  cursor: pointer;
+  transition: box-shadow 0.35s ease, transform 0.3s ease;
+  user-select: none;
+  animation: none;
+}
+
+.btn-gradient:hover,
+.btn-gradient:focus {
+  box-shadow: none;
+  transform: none;
+  outline: none;
+}
+
+/* AM/PM buttons with intense neon glow */
+.period-btn {
+  flex: 1;
+  padding: 0.75rem 0;
+  border-radius: 1.2rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: transparent;
+  border: 2.5px solid #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: background 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+  user-select: none;
+  letter-spacing: 0.09em;
+  margin: 0 0.25rem;
+  box-shadow: none;
+  text-transform: uppercase;
+  filter: none;
+}
+
+.period-btn.active {
+  background: #00b8ff;
+  border-color: #00b8ff;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+.period-btn:hover:not(.active),
+.period-btn:focus:not(.active) {
+  background: rgba(0, 184, 255, 0.2);
+  border-color: #00b8ff;
+  outline: none;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* Alarm display area */
+#alarmDisplay {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 0.3rem;
+  text-shadow: none;
+  font-family: 'Fredoka One', cursive;
+  user-select: text;
+}
+
+#alarmStatus {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #4dd0ff;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+}
+
+/* Buttons container */
+.flex.space-x-6 > button {
+  min-width: 140px;
+}
+
+/* Obnoxious alarm icon with shake + pulse + color flicker */
+.alarm-icon {
+  font-size: 5.5rem;
+  color: #ffb300;
+  animation: none;
+  user-select: none;
+  margin-top: 1rem;
+  filter: none;
+}
+
+/* Removed keyframes shake, pulse, flicker */
+
+/* Alarm display area */
+#alarmDisplay {
+  font-size: 2.2rem;
+}
+
+/* Buttons container */
+.flex.space-x-6 > button {
+  min-width: 140px;
+}
+
+/* Removed funky-blob and floaty keyframes */
+
+/* ADD THIS HERE */
+select {
+  background: rgba(0, 0, 0, 0.499);
+  color: #fff;
+  border: 2px solid rgba(144, 143, 143, 0.421);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  appearance: none;
+  backdrop-filter: blur(10px);
+}
+
+select:focus {
+  outline: none;
+  border-color: #ffb300;
+  box-shadow: none;
+}
+
+.funny-quote {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff5722;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  pointer-events: none;
+  white-space: nowrap;
+  animation: popUp 2s ease-out forwards, floatAround 5s linear infinite;
+  transform: none;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, -30px);
+  }
+  50% {
+    transform: translate(-40px, 60px);
+  }
+  75% {
+    transform: translate(30px, -50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 460px) {
+  #hour, #minute {
+    font-size: 5.5rem;
+  }
+}

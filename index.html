@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>sleeplert</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center px-4" style="background-image: url('https://i.ibb.co/5fXzKCy/Screenshot-2025-08-09-at-3-36-40-AM.png'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: transparent;">
+   <div class="funky-blob one"></div>
+   <div class="funky-blob two"></div>
+  <!-- Clock card -->
+  <section class="card mb-6 text-center" style="background-color: transparent;">
+    <div class="flex justify-center items-center mb-1 space-x-2 select-none">
+      <span id="hour" class="text-6xl font-extrabold">8</span>
+      <span class="text-6xl font-extrabold">:</span>
+      <span id="minute" class="text-6xl font-extrabold">55</span>
+    </div>
+    <div id="ampm" class="text-gray-400 select-none">PM</div>
+    <div id="date" class="mt-2 text-gray-500 select-none text-sm font-light"></div>
+
+    <div class="mt-6 flex justify-center items-center space-x-4 text-gray-400 text-xs select-none font-semibold">
+      <span>12H</span>
+      <label class="inline-flex relative items-center cursor-pointer">
+        <input type="checkbox" id="toggleFormat" class="toggle-switch" aria-label="Toggle 12 hour / 24 hour format"/>
+      </label>
+      <span>24H</span>
+    </div>
+  </section>
+
+  <!-- Alarm card -->
+  <section class="card mb-6" style="background-color: transparent;">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center space-x-2">
+        <span class="w-3 h-3 rounded-full bg-blue-600 inline-block"></span>
+        <div class="font-semibold">Alarm</div>
+      </div>
+      <label class="inline-flex relative items-center cursor-pointer">
+        <input type="checkbox" id="alarmToggle" class="toggle-switch" aria-label="Enable/disable alarm" />
+      </label>
+    </div>
+
+    <form id="alarmForm" class="grid grid-cols-2 gap-6 mb-4 select-none" onsubmit="return false;">
+      <div>
+        <label for="alarmHour" class="block mb-1 text-xs text-gray-400 font-light uppercase tracking-wider">Hour</label>
+        <select id="alarmHour" aria-label="Alarm hour"></select>
+      </div>
+      <div>
+        <label for="alarmMinute" class="block mb-1 text-xs text-gray-400 font-light uppercase tracking-wider">Minute</label>
+        <select id="alarmMinute" aria-label="Alarm minute"></select>
+      </div>
+    </form>
+
+    <fieldset class="flex rounded-md overflow-hidden border border-gray-700 mb-4" aria-label="AM PM period selection">
+      <button type="button" id="periodAM" class="period-btn active" aria-pressed="true">AM</button>
+      <button type="button" id="periodPM" class="period-btn" aria-pressed="false">PM</button>
+    </fieldset>
+
+    <div aria-live="polite" aria-atomic="true" class="bg-gray-800 rounded-lg p-4 select-none">
+    <div id="alarmDisplay" class="text-xl font-extrabold tracking-tight leading-tight">6:30 AM</div>
+    <div id="alarmStatus" class="text-gray-400 text-xs font-light">Alarm disabled</div>
+</div>
+
+<div id="sarcasticMessage" class="sarcastic-message"></div>
+<div class="alarm-icon" style="display:none;">🔊</div>
+  </section>
+
+  <!-- Buttons row -->
+  <div class="flex space-x-6 max-w-md w-full justify-center select-none mb-12">
+    <button id="testAlarmBtn" class="btn-gradient rounded-full px-8 py-2 border border-blue-400 text-white transition-all focus:outline-none focus:ring-4 focus:ring-blue-400 focus:ring-offset-1">Test Alarm</button>
+    <button id="snoozeBtn" class="btn-gradient rounded-full px-8 py-2">Snooze: 5m</button>
+  </div>
+
+  <audio id="alarmSound" preload="auto" src="WhatsApp Image 2025-08-09 at 07.30.03.mp3"></audio>
+
+</body>
+<script src="script.js"></script>
+<script>
+// Reverse volume changes for #alarmSound
+const alarmSound = document.getElementById('alarmSound');
+let lastVolume = alarmSound.volume;
+
+alarmSound.addEventListener('volumechange', () => {
+  if (alarmSound.volume < lastVolume) {
+    alarmSound.volume = Math.min(lastVolume + 0.1, 1);
+  } else if (alarmSound.volume > lastVolume) {
+    alarmSound.volume = Math.max(lastVolume - 0.1, 0);
+  }
+  lastVolume = alarmSound.volume;
+});
+</script>
+</html>
