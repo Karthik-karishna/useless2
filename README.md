@@ -1,96 +1,49 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 
-# [Project Name] 🎯
+# SLEEPLERT 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name:ERROR 404
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Mohammed Sinan K - College of Engineering Munnar
+- Member 2: Karthik Krishna - College of Engineering Munnar
 
 ### Project Description
-[2-3 lines about what your project does]
+SLEEPLERT is a web based site. Its works like not an ordinary alarm it goes off exactly the half of the time the user sets the alarm. Also with some quots and a voice over.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+The laziness of the people who are not ready to wakeup early.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+We are solving it by waking the user soo early.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
-
-### Implementation
-For Software:
-# Installation
-[commands]
-
-# Run
-[commands]
+- HTML, CSS, JavaScript
+- VS Code, GIT Hub.
 
 ### Project Documentation
-For Software:
+For Software:Features:
+	Motivational Wake-Up Alerts™
+“Yo Karthik! You’re in DEEP sleep! Good job bro! 🚨💤”
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1710" height="949" alt="Screenshot 2025-08-09 at 8 15 01 AM" src="https://github.com/user-attachments/assets/28fbb71d-add3-47fc-ad91-b1c716c42c99" />(Shows the user interface)
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1710" height="950" alt="Screenshot 2025-08-09 at 8 15 23 AM" src="https://github.com/user-attachments/assets/4d850e25-dda0-4c9e-8e76-5c1a0fddc5f6" />(Shows the working of the alarm and what the screen shows when it works)
+
+
+<img width="390" height="590" alt="Screenshot 2025-08-09 at 8 18 43 AM" src="https://github.com/user-attachments/assets/bd166f4f-54c9-44fa-9338-e306157f40c4" />(Shows the workflow)
+
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+Folder name: USELESS -> index.html, script.js, style.css, audio file
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
